@@ -2,7 +2,11 @@ import React from 'react'
 
 const HomeScreen = () => {
   return (
-    <div>HomeScreen</div>
+    <div className='hero-bg  relative '>
+        {/* Nav  */}
+      
+ 
+    </div>
   )
 }
 
