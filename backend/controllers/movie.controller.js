@@ -62,7 +62,7 @@ const  getSimilerMovies = async (req, res) => {
         const data = await fetchFromTMDB(`https://api.themoviedb.org/3/movie/${movieId}/similar?language=en-US`);
         res.json({
             success: true,
-            similerMovies: data.results
+            similar: data.results
         });
     } catch (error) {
         if(error.message.includes("404")) {
@@ -78,7 +78,7 @@ const getMoviesByCategory  = async (req, res) => {
         const data = await fetchFromTMDB(`https://api.themoviedb.org/3/movie/${category}?language=en-US`);
         res.json({
             success: true,
-            movies: data.results
+            content: data.results
         });
     } catch (error) {
         if(error.message.includes("404")) {

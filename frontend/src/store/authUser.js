@@ -30,10 +30,10 @@ const useAuthStore = create((set) => ({
             set({ isLoggingIn: false, user: null });
         }
     },
-    signout: async (credentials) => {
+    signout: async () => {
         set({ isLoggingOut: true });
         try {
-            await axios.post('/api/v1/auth/logout', credentials);
+            await axios.post('/api/v1/auth/logout');
             set({user: null, isLoggingOut: false});
             toast.success("Logout successful");
         } catch (error) {
