@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthStore } from "../store/authUser";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login , isLoggingIn } = useAuthStore();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    login({ email, password });
   };
   return (
     <div className="hero-bg h-screen w-full">
@@ -60,8 +62,10 @@ const LoginPage = () => {
               />
             </div>
 
-            <button className="w-full py-2 px-4 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 focus:outline-none focus:ring hover:cursor-pointer">
-              Login
+            <button 
+            disabled={isLoggingIn}
+            className="w-full py-2 px-4 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 focus:outline-none focus:ring hover:cursor-pointer">
+              {isLoggingIn ? "Logging in..." : "Login"}
             </button>
           </form>
 

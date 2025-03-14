@@ -1,11 +1,18 @@
 import React from 'react'
+import { useAuthStore } from '../../store/authUser'
 
 const HomeScreen = () => {
+
+  const {signout} = useAuthStore()
+
+  const handleLogout = () => {
+    signout();
+  }
   return (
-    <div className='hero-bg  relative '>
-        {/* Nav  */}
-      
- 
+    <div>
+      <h1>HomeScreen</h1>
+      <button onClick={handleLogout}>Logout</button>
+
     </div>
   )
 }
