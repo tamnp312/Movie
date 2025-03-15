@@ -67,10 +67,6 @@ const WatchPage = () => {
     getContentDetails();
   }, [contentType, id]);
 
-  console.log("trailer", trailers);
-  console.log("similer", similarContent);
-  console.log("details", content);
-
   const handlePrev = () => {
     if (currentTrailerIdx > 0) setCurrentTrailerIdx(currentTrailerIdx - 1);
   };
@@ -109,7 +105,7 @@ const WatchPage = () => {
           <Navbar />
           <div className="text-center mx-auto px-4 py-8 h-full mt-40">
             <h2 className="text-2xl sm:text-5xl font-bold text-balance">
-              Content not found 😥
+              Content not found
             </h2>
           </div>
         </div>

@@ -8,6 +8,9 @@ import { useEffect } from "react";
 import { useAuthStore } from "./store/authUser";
 import { Loader } from "lucide-react";
 import WatchPage from "./page/WatchPage";
+import SearchPage from "./page/SearchPage";
+import SearchHistoryPage from "./page/SearchHistoryPage";
+import NotFoundPage from "./page/NotFoundPage";
 
 function App() {
   const location = useLocation();
@@ -15,10 +18,8 @@ function App() {
   const { user, isCheckingAuth, authCheck } = useAuthStore();
 
   useEffect(() => {
-		authCheck();
-	}, [authCheck]);
-
-
+    authCheck();
+  }, [authCheck]);
 
   if (isCheckingAuth) {
     return (
@@ -46,8 +47,15 @@ function App() {
           path="/watch/:id"
           element={user ? <WatchPage /> : <Navigate to={"/login"} />}
         />
-
-
+        <Route
+          path="/search"
+          element={user ? <SearchPage /> : <Navigate to={"/login"} />}
+        />
+        <Route
+          path="/history"
+          element={user ? <SearchHistoryPage /> : <Navigate to={"/login"} />}
+        />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       {location.pathname === "/" && <Footer />}
 
