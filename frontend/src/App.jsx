@@ -57,7 +57,7 @@ function App() {
         />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-      {location.pathname === "/" && <Footer />}
+      {(location.pathname !== "/login" || location.pathname !== "/signup" )&& <Footer />}
 
       <Toaster />
     </>

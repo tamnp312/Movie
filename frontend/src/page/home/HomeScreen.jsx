@@ -86,6 +86,10 @@ const HomeScreen = () => {
         : TV_CATEGORIES.map((category) => <MovieSlider key={category} category={category}/>)}
       </div>
 
+      <div className="h-2  w-full bg-[#232323] " aria-hidden="true">
+        {" "}
+      </div>
+
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -7,7 +8,13 @@ export default function Footer() {
         {/* Logo & Mô tả */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-3xl font-bold text-white">MovieZone</h2>
+          <Link to="/">
+          <img
+            src="/logo.png"
+            alt="Netflix Logo"
+            className="w-28 sm:w-40"
+          />
+        </Link>
             <p className="mt-2 text-sm">
               Kho phim không giới hạn – Cập nhật nhanh nhất!
             </p>

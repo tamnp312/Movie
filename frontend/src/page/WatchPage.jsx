@@ -119,7 +119,7 @@ const WatchPage = () => {
         <Navbar />
 
         {trailers.length > 0 && (
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4 mt-10">
             <button
               className={`bg-gray-500/70 hover:bg-gray-500 text-white py-2 px-4 rounded 
                             ${
@@ -172,6 +172,10 @@ const WatchPage = () => {
           )}
         </div>
 
+        <div className="h-2  w-full bg-[#232323] my-10" aria-hidden="true">
+        {" "}
+      </div>
+
         {/* movie details */}
         <div
           className="flex flex-col md:flex-row items-center justify-between gap-20 
@@ -202,8 +206,12 @@ const WatchPage = () => {
           />
         </div>
 
+        <div className="h-2  w-full bg-[#232323] my-10" aria-hidden="true">
+        {" "}
+      </div>
+
         {similarContent.length > 0 && (
-          <div className="mt-12 max-w-5xl mx-auto relative">
+          <div className="mt-12 max-w-5xl mx-auto relative ">
             <h3 className="text-3xl font-bold mb-4">Similar Movies/Tv Show</h3>
 
             <div
