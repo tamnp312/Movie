@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 import { useAuthStore } from "./store/authUser";
 import { Loader } from "lucide-react";
+import WatchPage from "./page/WatchPage";
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,12 @@ function App() {
           path="/signup"
           element={!user ? <SignUpPage /> : <Navigate to={"/"} />}
         />
+        <Route
+          path="/watch/:id"
+          element={user ? <WatchPage /> : <Navigate to={"/login"} />}
+        />
+
+
       </Routes>
       {location.pathname === "/" && <Footer />}
 
