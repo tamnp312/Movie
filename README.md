@@ -4,7 +4,9 @@
 [Live Demo](#) *(https://moviezone-kmf8.onrender.com)*
 
 ## Video Tutorial on YouTube
-[Watch Here](#) *(Thêm link video hướng dẫn nếu có)*
+[![Watch the video](https://img.youtube.com/vi/O18UJnbMUs/maxresdefault.jpg)](https://www.youtube.com/watch?v=O18UJnbMUs)
+
+[Watch Here](#) *(https://youtu.be/vO18UJnbMUs)*
 
 ---
 
