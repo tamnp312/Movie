@@ -24,7 +24,7 @@ const SignupPage = () => {
     <div className="hero-bg h-screen w-full">
       <header className="max-w-6xl mx-auto flex justify-between items-center p-4">
         <Link to={"/"}>
-          <img src="/netflix-logo.png" alt="Netflix Logo" className="w-52" />
+          <img src="/logo.png" alt="Logo" className="w-52" />
         </Link>
       </header>
 
