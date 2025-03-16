@@ -4,7 +4,6 @@
 [Live Demo](#) *(https://moviezone-kmf8.onrender.com)*
 
 ## Video Tutorial on YouTube
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O18UJnbMUs" frameborder="0" allowfullscreen></iframe>
 
 
 [Watch Here](#) *(https://youtu.be/vO18UJnbMUs)*
